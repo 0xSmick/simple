@@ -16,10 +16,10 @@ if(!empty($_GET['id'])) {
 			echo 'Sorry the title was not found';
 		}
 	?>
-	
+
 <?php
 try {
-  $results = $db->prepare('select * from reviews join companies on companies.id = reviews.company_id where companies.id = ?');
+  $results = $db->prepare('select reviews.id Reviews_ID, reviews.title, reviews.content, reviews.rating from reviews join companies on companies.id = reviews.company_id where companies.id = ?');
   $results->bindParam(1, $company_id);
   $results->execute();
 } catch(Exception $e) {
@@ -52,6 +52,8 @@ $reviews = $results->fetchALL(PDO::FETCH_ASSOC);
 
     
   <h1><?php echo $title['name']?></h1>
+  <p><?php echo 'Average Rating: '.$title['rating']?></p>
+  <p><?php echo 'Address: '.$title['address'] ?></p>
   	
   	</div>
 
@@ -60,9 +62,8 @@ $reviews = $results->fetchALL(PDO::FETCH_ASSOC);
   
    <ol><?php echo '<b>Review Contents: </b>'. $review['content']; ?> </ol>
    <ol><?php echo '<b>Review Rating: </b>' .$review['rating']; ?></ol>
-   
+   <ol><?php echo '<a href="review.php?id='.$review['Reviews_ID'].'>'."View Full Review".'</a></ol>'; ?> <?php } ?> 
 
-  <? } ?>
   </div>
 
 
