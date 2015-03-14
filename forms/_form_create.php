@@ -1,3 +1,12 @@
+<?php try {
+      $results = $db->query('select companies.name from companies');
+} catch(Exception $e) {
+ echo $e->getMessage(); 
+} 
+
+$companies = $results->fetchAll(PDO::FETCH_ASSOC);
+?>
+
 <div class="modal fade" id="create" role="dialog">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -38,9 +47,6 @@
                   </select>
                 </div>
               </div>
-
-
-            </div>
             <div class="modal-footer">
               <a class="btn btn-default" data-dismiss="modal">Close</a>
               <button type="submit" class="btn btn-primary">Send</button>

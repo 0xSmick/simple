@@ -1,0 +1,11 @@
+Things to be done
+
+-form populates database system
+-form has dropdown information
+-reviews.php lists out all of the reviews for each company - done
+-fix review.php
+-format companies.php
+
+-API components to Businesses
+
+ <ol><?php echo '<b><a href="review.php?id='.$review["reviews.id"].'">Link</b>'; ?>
