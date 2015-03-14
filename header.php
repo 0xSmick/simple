@@ -5,8 +5,8 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="Contact Form tutorial from BootstrapBay.com">
-    <meta name="author" content="BootstrapBay.com">
+    <meta name="description" content="You control the taxi economy">
+    <meta name="author" content="Taxconomy.com">
     <title>Taxconomy</title>
     <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
     <link href="bootstrap/css/custom.css" rel="stylesheet">
