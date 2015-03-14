@@ -1,4 +1,4 @@
-<? require_once('simple/database.php'); ?>
+<? require_once('database.php'); ?>
 
 <?php try {
       $results = $db->query('select companies.name from companies');
@@ -17,9 +17,9 @@ $companies = $results->fetchAll(PDO::FETCH_ASSOC);
               <h4>Create Review<h4>
             </div>
             <div class="modal-body">
-              <div class="control-group">
-                <label for="company-name" class="col-sm-2 control-label">Company Name</label>
-                <div class="col-sm-10">
+              <div class="form-group">
+                <label for="company-name" class="col-md-4 control-label">Company Name</label>
+              <div class="col-md-4">
                 <select class="input-xlarge" id="companyName" name="companyName">
                   <?php foreach ($companies as $company) { ?>
                   <?php  echo '<option>'.$company["name"].'</option>';} ?>
@@ -32,12 +32,14 @@ $companies = $results->fetchAll(PDO::FETCH_ASSOC);
                   <input type="text" class="form-control" id="review-title" placeholder="Review Title">
                 </div>
               </div>
+              
               <div class="form-group">
                 <label for="Review" class="col-sm-2 control-label">Review</label>
                 <div class="col-sm-10">
                   <textarea class="form-control" rows="15"></textarea>
                 </div>
               </div>
+
               <div class="control-group">
                 <label class="control-label" for="rating">Company Rating</label>
                 <div class="controls">
@@ -50,9 +52,6 @@ $companies = $results->fetchAll(PDO::FETCH_ASSOC);
                   </select>
                 </div>
               </div>
-
-
-            </div>
             <div class="modal-footer">
               <a class="btn btn-default" data-dismiss="modal">Close</a>
               <button type="submit" class="btn btn-primary">Send</button>
