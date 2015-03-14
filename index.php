@@ -6,7 +6,7 @@
       <p>You Control the Taxi Economy</p>
       <a href="#create" data-toggle="modal" class="btn btn-success btn-lg btn-block">Submit Your Review</a>
       <!--#a href="#" class="btn btn-primary btn-lg btn-block">View All Reviews</a>-->
-      <a href="/simple/companies.php" class="btn btn-default btn-lg btn-block">View All Companies</a>
+      <a href="companies.php" class="btn btn-default btn-lg btn-block">View All Companies</a>
     </div>
   </div>
          
@@ -14,12 +14,10 @@
     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
       <div class="container">
         <div class="navbar-text pull-left">
-          <p>© 2014 BootstrapBay.</p>
+          <p>© 2014 TaxConomy.</p>
         </div>
         <div class="navbar-text pull-right">
-          <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
-          <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-          <a href="#"><i class="fa fa-google-plus fa-2x"></i></a>
+          <p>Because it's your duty</p>
         </div>
       </div>
     </div>
