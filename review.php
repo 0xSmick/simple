@@ -7,10 +7,11 @@
 if(!empty($_GET['reviews.id'])) {
   $review_id = intval($_GET['reviews.id']);
 
-	$result = $db->prepare('select * from reviews where reviews.id = ?');
+	$result = $db->prepare('select * from reviews where reviews.id = :review_id');
   var_dump($result);
   die();
-	$result->bindParam(1, $review_id);
+  
+	$result->bindParam(':review_id', $review_id, PDO::PARAM_INT);
 	$result->execute();
 
 	$review = $result->fetch(PDO::FETCH_ASSOC);

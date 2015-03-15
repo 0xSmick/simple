@@ -9,23 +9,16 @@
 $companies = $results->fetchAll(PDO::FETCH_ASSOC);
 ?>
 
-<?php
-    if(isset($_POST['reviewTitle'])) { 
-    $id_query = $db->prepare('Select id from companies where name = :companyName');
-    $id_query->bindParam(':companyName', $_POST['companyName'], PDO::PARAM_INT);
-    $id_query->execute();
-    $obj = $id_query->fetchObject();
-    $obj = $obj->id;
-    $obj = (int)$obj;
-    
+<?php if(isset($_POST['reviewTitle'])) {
+    //$companyName = $_POST['companyName'];
+    $companyid = $_POST['companyid'];
     $reviewTitle = $_POST['reviewTitle'];
     $reviewContent = $_POST['reviewContent'];
     $rating = $_POST['rating'];
-    $q = "insert into reviews (company_id, title, content, rating) VALUES (:company_id, :title, :content, :rating)
-";
+    $q = "INSERT into reviews(company_id, title, content, rating) VALUES (:company_id, :title, :content, :rating);";
     $query = $db->prepare($q);
     $results = $query->execute(array(
-        ":company_id" => $obj,
+        ":company_id" => $companyid,
         ":title" => $reviewTitle,
         ":content" => $reviewContent,
         ":rating" => $rating
@@ -42,17 +35,16 @@ $companies = $results->fetchAll(PDO::FETCH_ASSOC);
               <h4>Create Review<h4>
             </div>
             <div class="modal-body">
-
-              <div class="form-group">
-                <label for="company-name" class="col-md-4 control-label">Company Name</label>
+             
+               <div class="form-group">
+                <label for="company-id" class="col-md-4 control-label">Company ID</label>
               <div class="col-md-4">
-                <select class="input-xlarge" id="companyName" name="companyName">
+                <select class="input-xlarge" id="companyid" name="companyid">
                   <?php foreach ($companies as $company) { ?>
-                  <?php  echo '<option>'.$company["name"].'</option>';} ?>
+                  <?php  echo '<option>'.$company["id"].'</option>';} ?>
                 </select>
                 </div>
               </div>
-
 
               <div class="form-group">
                 <label for="review-title" class="col-sm-2 control-label">Review Title</label>
