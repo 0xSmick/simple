@@ -19,7 +19,7 @@ if(!empty($_GET['id'])) {
 
 <?php
 try {
-  $results = $db->prepare('select reviews.id Reviews_ID, reviews.title, reviews.content, reviews.rating from reviews join companies on companies.id = reviews.company_id where companies.id = ?');
+  $results = $db->prepare('select reviews.id Reviews_id, reviews.title, reviews.content, reviews.rating from reviews join companies on companies.id = reviews.company_id where companies.id = ?');
   $results->bindParam(1, $company_id);
   $results->execute();
 } catch(Exception $e) {
@@ -57,12 +57,12 @@ $reviews = $results->fetchALL(PDO::FETCH_ASSOC);
   	
   	</div>
 
-  	<? foreach($reviews as $review) {	?>
+  	<?php foreach($reviews as $review) {	?>
   <h2><?php echo 'Title: '.$review['title']; ?></h2>
   
-   <ol><?php echo '<b>Review Contents: </b>'. $review['content']; ?> </ol>
+   <ol><?php echo '<b>Review Contents: </b>'. $review['content']; ?></ol>
    <ol><?php echo '<b>Review Rating: </b>' .$review['rating']; ?></ol>
-   <ol><?php echo '<a href="review.php?id='.$review['Reviews_ID'].'>'."View Full Review".'</a></ol>'; ?> <?php } ?> 
+   <ol><?php echo '<i class="lens"></i><a href="review.php?id='.$review['Reviews_id'].'"">'."View Full Review".'</a></ol>'; ?> <?php } ?> 
 
   </div>
 

@@ -7,3 +7,4 @@ try {
 	echo "could not connect to the database";
 	die();
 }?>
+

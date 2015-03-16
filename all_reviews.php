@@ -14,11 +14,13 @@ $reviews = $results->fetchAll(PDO::FETCH_ASSOC);
  <div class="jumbotron text-center">
 <h1>All Reviews</h1>
 	</div>
-	</div>
+	
 <ol>
 	<?php 
 	foreach($reviews as $review){
-     echo '<li><i class="lens"></i><a href="reviews.php?id='.$review["id"].'">'.$review["title"].'</li>'; 
+     echo '<li><a href="reviews.php?id='.$review["id"].'">'.$review["title"].'</li>'; 
     }
 	?>
 </ol>
+
+</div>
