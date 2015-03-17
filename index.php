@@ -19,7 +19,6 @@
           <p>© 2014 TaxConomy.</p>
         </div>
         <div class="navbar-text pull-right">
-          <p>Because it's your duty</p>
         </div>
       </div>
     </div>
