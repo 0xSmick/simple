@@ -95,9 +95,8 @@ function deleteReview() {
 	$results->bindParam(':r_id', $r_id, PDO::PARAM_INT);
 	$results->execute();
 	$review = $results->fetch(PDO::FETCH_ASSOC);
-	echo "Record deleted successfully";
+	echo $results->rowCount() . " record DELETED successfully";
 }
-
 
 
 ?>
