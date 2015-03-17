@@ -18,7 +18,7 @@ $reviews = $results->fetchAll(PDO::FETCH_ASSOC);
 <ol>
 	<?php 
 	foreach($reviews as $review){
-     echo '<li><a href="reviews.php?id='.$review["id"].'">'.$review["title"].'</li>'; 
+     echo '<li><a href="review.php?id='.$review["id"].'">'.$review["title"].'</li>'; 
     }
 	?>
 </ol>

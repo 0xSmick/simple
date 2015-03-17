@@ -1,4 +1,7 @@
 <? include('header.php'); ?>    
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+
   <div class="container">
     <div class="jumbotron text-center">
       <h1>TaxConomy</h1>
@@ -31,7 +34,7 @@
 
     <!-- This is the Form -->
     
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+  
     <script src="bootstrap/js/bootstrap.min.js"></script>
   </body>
 </html>
