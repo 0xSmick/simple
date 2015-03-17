@@ -5,16 +5,11 @@ Things to be done
 //form populates database system - done
 //form has dropdown information - done
 //reviews.php lists out all of the reviews for each company - done
-form grabs company name from query
+//form grabs company name from query
 
--fix review.php
--format companies.php
--API components to Businesses
+//fix review.php
+//format companies.php
+//API components to Businesses
 
-
- input type = hidden field
- like query??
- key and values in array
- edit htaccess file 
 
 ?>

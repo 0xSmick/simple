@@ -23,7 +23,7 @@ function getAllReviews() {
 }
 
 function getCompany() {
-	$id = $_GET['id'];
+	$id = (int)$_GET['id'];
 	$db = new PDO('mysql:host=localhost;dbname=simple_app;port=8889', "root", "root");
 	$results = $db->prepare('SELECT * from Companies where companies.id = :id');
 	$results->bindParam(':id', $id, PDO::PARAM_INT);
