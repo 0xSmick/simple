@@ -2,7 +2,7 @@
     <div class="navbar navbar-inverse navbar-fixed-bottom" role="navigation">
       <div class="container">
         <div class="navbar-text pull-left">
-          <p>© 2014 BootstrapBay.</p>
+          <p>© 2015 TaxConomy.</p>
         </div>
         <div class="navbar-text pull-right">
           <a href="#"><i class="fa fa-facebook-square fa-2x"></i></a>
