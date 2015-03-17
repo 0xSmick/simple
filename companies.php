@@ -2,7 +2,7 @@
 <? require_once('database.php'); ?>
 
 <? try {
-      $results = $db->query('Select companies.id, companies.name, companies.address, avg(reviews.rating) Average, count(reviews.rating) Total_Reviews from reviews join companies on companies.id = reviews.company_id group by companies.id');
+      $results = $db->query('Select companies.id, companies.name, companies.address, avg(reviews.rating) Average, count(reviews.rating) Total_Reviews from reviews join companies on companies.id = reviews.company_id group by companies.id order by Average DESC');
 } catch(Exception $e) {
  echo $e->getMessage(); 
 } 

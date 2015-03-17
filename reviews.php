@@ -19,7 +19,7 @@ if(!empty($_GET['id'])) {
 
 <?php
 try {
-  $results = $db->prepare('select reviews.id Reviews_id, reviews.title, reviews.content, reviews.rating from reviews join companies on companies.id = reviews.company_id where companies.id = ?');
+  $results = $db->prepare('select reviews.id Reviews_id, reviews.title, reviews.content, reviews.rating from reviews join companies on companies.id = reviews.company_id where companies.id = ? order by reviews.rating DESC');
   $results->bindParam(1, $company_id);
   $results->execute();
 } catch(Exception $e) {
